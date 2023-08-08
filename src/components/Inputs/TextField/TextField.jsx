@@ -1,9 +1,9 @@
 import React from 'react';
 import {
-  ErrorLabel_S,
-  InputLabel_S,
-  Input_S,
-  TextInputContainer_S
+  StyledErrorLabel,
+  StyledInputLabel,
+  StyledInput,
+  StyledTextInputContainer
 } from './textField.styles';
 import {errorColor} from '../../../assets/styles/colors';
 import PropTypes from "prop-types";
@@ -17,17 +17,17 @@ const TextField = (props) => {
   } : {};
 
 
-  return <TextInputContainer_S style={{...wrapperStyle}}>
-    {label && <InputLabel_S htmlFor={name} theme={theme}>{label}</InputLabel_S>}
-    <Input_S
+  return <StyledTextInputContainer style={{...wrapperStyle}}>
+    {label && <StyledInputLabel htmlFor={name} theme={theme}>{label}</StyledInputLabel>}
+    <StyledInput
       theme={theme}
       autoComplete="off"
       data-testid={testId}
       name={name}
       {...restProps}
     />
-    {error && <ErrorLabel_S>{helperText}</ErrorLabel_S>}
-  </TextInputContainer_S>
+    {error && <StyledErrorLabel>{helperText}</StyledErrorLabel>}
+  </StyledTextInputContainer>
 }
 
 TextField.propTypes = {

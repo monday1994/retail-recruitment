@@ -53,7 +53,7 @@ export const ProductsList = () => {
                 variant: "info"
             });
         }
-    }, [user]);
+    }, [user, dispatch, enqueueSnackbar]);
 
     if(isRequestPending || isBuyRequestPending) {
         return <StyledProductsList style={{marginTop: '3rem'}}>

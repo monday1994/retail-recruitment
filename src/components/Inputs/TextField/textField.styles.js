@@ -4,7 +4,7 @@ import {
   inputsBackgroundColor
 } from '../../../assets/styles/colors';
 
-export const TextInputContainer_S = styled.div`
+export const StyledTextInputContainer = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 0.7em;  
@@ -15,7 +15,7 @@ export const TextInputContainer_S = styled.div`
   }
 `
 
-export const Input_S = styled.input`
+export const StyledInput = styled.input`
   border-radius: 5px;
   padding: 0.5em 1.5em;
   width: 100%;
@@ -35,11 +35,11 @@ export const Input_S = styled.input`
   }
 `
 
-export const InputLabel_S = styled.label`
+export const StyledInputLabel = styled.label`
   color: ${props => props.theme.color || inputsBackgroundColor};
 `
 
-export const ErrorLabel_S = styled.label`
+export const StyledErrorLabel = styled.label`
   color: ${errorColor};
   font-size: 0.9em;
 `
